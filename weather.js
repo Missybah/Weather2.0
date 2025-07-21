@@ -39,19 +39,18 @@ function handleSearchSubmit(event) {
   ];
   let day = days[date.getDay()];
 
-  if (minutes <10) {
+  if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   return `${day} ${hours}:${minutes}`;
 }
-  let searchInput = document.querySelector("#search-form-input");
-  let city = searchInput.value.trim();
+let searchInput = document.querySelector("#search-form-input");
+let city = searchInput.value.trim();
 
-  let apiKey = "5c96e661b5c38754d1f19tae0off360c";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
+let apiKey = "5c96e661b5c38754d1f19tae0off360c";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+{
   axios.get(apiUrl).then(refreshWeather);
 }
-
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
