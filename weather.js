@@ -54,5 +54,6 @@ let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${api
 {
   axios.get(apiUrl).then(refreshWeather);
 }
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
