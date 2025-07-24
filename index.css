@@ -73,9 +73,13 @@ main {
   gap: -2px;
 }
 .weather-app-icon {
-  font-size: 55px;
-  margin-right: 7px;
+  width: 88px;
+  height: 88px;
+  margin-right: 0px;
   margin-left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .weather-app-temp-with-unit {
   display: flex;
